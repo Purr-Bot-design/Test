@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+<!-- Boxicons CSS -->
+<link rel="icon" type="image/x-icon" href="">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2976/2976128.png">
+<title>Bot</title>
+</head>
+<body>
+  <style>
+    *{
+      margin: 0;
+      padding: 0; 
+      box-sizing: bordex-box;
+      font-family: "Poppins", sans-serif;
+  }
+  body{
+    background-color: lightcoral;
+  }
+  .sidebar{
+    height: 100%;
+    width: 24px;
+    position: fixed;
+    background: #11101d;
+    padding: 20px 20px;
+  }
+  .sidebar .logo .logo_content{
+    color: #fff;
+    display: flex;
+    height: 50%;
+    width:100%;
+    align-items: center;
+  }
+  .logo .logo_content i{
+    font-size: 28px;
+    margin-right: 5px;
+  }
+  .logo .logo_content .logo_name{
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .sidebar #btn{
+    position: absolute;
+    color: #fff;
+    left: 90%;
+    top: 6px;
+    font-size:20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+  }
+  .sidebar ul{
+    margin-top: 20px;
+  }
+  .sidebar ul li{
+    list-style: none;
+    height: 50px;
+    width:100%;
+    position:relative;
+    margin: 0 5px;
+    line-height: 50px;
+    border-radius: 12px;
+  }
+  .sidebar ul li a{
+    color: lightcoral;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+  }
+  .sidebar ul li a:hover{
+    background:#fff;
+    color: #11101d;
+  }
+
+  .sidebar ul li a i{
+    height:50px; 
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+  }
+  h1{
+    position :relative;
+    left: 80px;
+    top: 70px;
+    font-size: 40px;
+    border-bottom-style: solid;
+    border-bottom-width:5px ;
+    height: 50px;
+    width: 400px;
+    }
+    p{
+    position: absolute;
+    left: 80px;
+    top: 160px;
+    right: 50px;
+    text-align: justify;
+    font-size: 25px;
+    font-family:Trebuchet MS;
+    }
+
+  </style>
+<div class="sidebar">
+  <div class="logo_content">
+    <div class="logo">
+    </div>
+    <i class='bx bx-menu'></i>
+  </div>
+  <ul class="navlist">
+    <li>
+      <a href="/">
+        <i class='bx bxs-home bx-sm'></i>
+        <span class="links_name"></span>
+      </a>
+      <!-- <span class="tooltip">Commands</span> -->
+    </li>
+    <li>
+      <a href="/commands">
+        <i class='bx bxs-copy-alt bx-sm'></i>
+        <span class="links_name"></span>
+      </a>
+      <!-- <span class="tooltip">Commands</span> -->
+    </li>
+    <li>
+      <a href="/logs">
+        <i class='bx bx-history bx-sm'></i>
+        <span class="links_name"></span>
+      </a>
+      <!-- <span class="tooltip">Commands</span> -->
+    </li>
+    <li>
+      <a href="/plans">
+        <i class='bx bx-paper-plane bx-sm bx-tada'></i>
+        <span class="links_name"></span>
+      </a>
+      <!-- <span class="tooltip">Commands</span> -->
+    </li>
+    <li>
+      <a href="/dev">
+        <i class='bx bxs-user-badge bx-sm'></i>
+        <span class="links_name"></span>
+      </a>
+      <!-- <span class="tooltip">Commands</span> -->
+    </li>
+  </div>
+  </ul>
+  <div class="content">
+    <h1>Future Plans</h1>
+    <p>Comments here</p>
+  </div>
+  
+</div>
+</body>
+</html>

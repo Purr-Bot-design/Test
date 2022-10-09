@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- Boxicons CSS -->
+<link rel="icon" type="image/x-icon" href="">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2976/2976128.png">
+<title>Bot</title>
+</head>
+<body>
+  <style>
+    *{
+      margin: 0;
+      padding: 0; 
+      box-sizing: bordex-box;
+      font-family: "Poppins", sans-serif;
+  }
+  body{
+    background-color: lightcyan;
+  }
+  .sidebar{
+    height: 100%;
+    width: 24px;
+    position: fixed;
+    background: #11101d;
+    padding: 20px 20px;
+  }
+  .sidebar .logo .logo_content{
+    color: #fff;
+    display: flex;
+    height: 50%;
+    width:100%;
+    align-items: center;
+  }
+  
+  .logo .logo_content i{
+    font-size: 28px;
+    margin-right: 5px;
+  }
+  .logo .logo_content .logo_name{
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .sidebar #btn{
+    position: absolute;
+    color: #fff;
+    left: 90%;
+    top: 6px;
+    font-size:20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+  }
+  .sidebar ul{
+    margin-top: 20px;
+
+  }
+  .sidebar ul li{
+    list-style: none;
+    height: 50px;
+    width:100%;
+    position:relative;
+    margin: 0 5px;
+    line-height: 50px;
+    border-radius: 12px;
+  }
+  .sidebar ul li a{
+    color: lightcyan;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+  }
+
+  .sidebar ul li a:hover{
+    background:#fff;
+    color: #11101d;
+  }
+
+  .sidebar ul li a i{
+    height:50px; 
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+  }
+  .element1{
+    position:absolute;
+    top: 70px;
+    left: 80px;
+    font-size: 40px;
+    border-bottom-style: solid;
+    border-bottom-width:5px ;
+    height: 50px;
+    width: 300px;
+  }
+  .element2{
+    position: absolute;
+    align-items: center;
+    right: 50px;
+    top: 160px;
+    left: 80px;
+    text-align: justify;
+    font-size: 25px;
+    font-family:Trebuchet MS;
+  }
+  #head2{
+    position: absolute;
+    align-items: center;
+    right: 50px;
+    top: 350px;
+    left: 80px;
+    text-align: justify;
+    font-size: 28px;
+  }
+  #head3{
+    position: absolute;
+    align-items: center;
+    right: 50px;
+    top: 680px;
+    left: 0px;
+    text-align: justify;
+    font-size: 28px;
+  }
+  #head4{
+    position: absolute;
+    align-items: center;
+    right: 50px;
+    top: 680px;
+    left: 0px;
+    text-align: justify;
+    font-size: 28px;
+  }
+  #head5{
+    position: absolute;
+    align-items: center;
+    right: 50px;
+    top: 680px;
+    left: 0px;
+    text-align: justify;
+    font-size: 28px;
+  }
+
+  .tab1{
+    position: absolute;
+    left: 80px;
+    top: 400px;
+    right: 20%;
+  }
+  .tab2{
+    position: relative;
+    left: 0px;
+    top: 130px;
+    right: 20%;
+  }
+  .tab3{
+    position: relative;
+    left: 0px;
+    top: 130px;
+    right: 20%;
+  }
+  .tab4{
+    position: relative;
+    left: 0px;
+    top: 130px;
+    right: 20%;
+  }
+
+  div.blueTable {
+    border: 3px solid #1C6EA4;
+    background-color: #EEEEEE;
+    width: 100%;
+    height: 600px;
+    text-align: center;
+    border-collapse: collapse;
+  }
+  .divTable.blueTable .divTableCell, .divTable.blueTable .divTableHead {
+    border: 3px solid #AAAAAA;
+    padding: 4px 2px;
+  }
+  .divTable.blueTable .divTableBody .divTableCell {
+    font-size: 13px;
+  }
+  .divTable.blueTable .divTableHeading {
+    background: #1C6EA4;
+    background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    border-bottom: 2px solid #444444;
+  }
+  .divTable.blueTable .divTableHeading .divTableHead {
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    border-left: 2px solid #D0E4F5;
+  }
+  .divTable.blueTable .divTableHeading .divTableHead:first-child {
+    border-left: none;
+  }
+  
+  .blueTable .tableFootStyle {
+    font-size: 14px;
+  }
+  .blueTable .tableFootStyle .links {
+     text-align: right;
+  }
+  .blueTable .tableFootStyle .links a{
+    display: inline-block;
+    background: #1C6EA4;
+    color: #FFFFFF;
+    padding: 2px 8px;
+    border-radius: 5px;
+  }
+  .blueTable.outerTableFooter {
+    border-top: none;
+  }
+  .blueTable.outerTableFooter .tableFootStyle {
+    padding: 3px 5px; 
+  }
+  /* DivTable.com */
+  .divTable{ display: table; }
+  .divTableRow { display: table-row; }
+  .divTableHeading { display: table-header-group;}
+  .divTableCell, .divTableHead { display: table-cell;}
+  .divTableHeading { display: table-header-group;}
+  .divTableFoot { display: table-footer-group;}
+  .divTableBody { display: table-row-group;}
+  </style>
+<div class="sidebar">
+  <div class="logo_content">
+    <div class="logo">
+    </div>
+    <i class='bx bx-menu'></i>
+  </div>
+  <ul class="navlist">
+    <li>
+      <a href="/">
+        <i class='bx bxs-home bx-sm'></i>
+        <span class="links_name" id="home"></span>
+      </a>
+      <!-- <span class="tooltip">Commands</span> -->
+    </li>
+    <li>
+      <a href="/commands">
+        <i class='bx bxs-copy-alt bx-tada bx-sm'></i>
+        <span class="links_name"></span>
+      </a>
+      <!-- <span class="tooltip">Commands</span> -->
+    </li>
+    <li>
+      <a href="/logs">
+        <i class='bx bx-history bx-sm'></i>
+        <span class="links_name"></span>
+      </a>
+      <!-- <span class="tooltip">Commands</span> -->
+    </li>
+    <li>
+      <a href="/plans">
+        <i class='bx bx-paper-plane bx-sm'></i>
+        <span class="links_name"></span>
+      </a>
+      <!-- <span class="tooltip">Commands</span> -->
+    </li>
+    <li>
+      <a href="/dev">
+        <i class='bx bxs-user-badge bx-sm'></i>
+        <span class="links_name"></span>
+      </a>
+      <!-- <span class="tooltip">Commands</span> -->
+    </li>
+  </div>
+  </ul>
+  <h1 class="element1">Commands</h1>
+  <p class="element2">The Bot has some awesome commands you might want to explore. They all are free to use but don't forget to try them all. The bot is still in development so there is a slight chance that you might face a problem in something or the other. Below are the list of commands and their uses! The prefix of the bot is (prefix)</p>
+  <h2 id="head2">Category1</h2>
+  <div class="tab1">
+    <div class="divTable blueTable">
+      <div class="divTableHeading">
+      <div class="divTableRow">
+      <div class="divTableHead">Name</div>
+      <div class="divTableHead">Uses</div>
+      </div>
+      </div>
+      <div class="divTableBody">
+      <div class="divTableRow">
+      <div class="divTableCell">help</div>
+      <div class="divTableCell">shows all the available commands available in the bot</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">user <:member:></div>
+      <div class="divTableCell">shows the user info that you have mentioned while entering the command</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">dm <:member:></div>
+      <div class="divTableCell">the bot dms the user that you mentioned with a message which you entered in the syntax</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">ping</div>
+      <div class="divTableCell">tells the latency of the bot</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">logs</div>
+      <div class="divTableCell">shows the recent changes and fixes in the bot. Mainly, its a list of updates and the new commands</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">greet</div>
+      <div class="divTableCell">greets the user with a heartwarming message</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">info</div>
+      <div class="divTableCell">shows the current stats and information regarding the bot</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">cat</div>
+      <div class="divTableCell">gives out a wholesome image of a kitten or a cat</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">pfp</div>
+      <div class="divTableCell">shows the current profile picture of the user you mentioned or your profile picture if the user is not mentioned</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">serverinfo</div>
+      <div class="divTableCell">gives out certain things about the server in which you entered this command.</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">feedback</div>
+      <div class="divTableCell">a way of giving a feedback to the development of the bot and its working. The feedback you will give will reach to the developer.</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">echo <:message:></div>
+      <div class="divTableCell">this command will make the bot say whatever you typed the message in the syntax</div>
+      </div>
+      </div>
+      </div>
+      <h2 id="head3">Category2</h2>
+  <div class="tab2">
+    <div class="divTable blueTable">
+      <div class="divTableHeading">
+      <div class="divTableRow">
+      <div class="divTableHead">Name</div>
+      <div class="divTableHead">Uses</div>
+      </div>
+      </div>
+      <div class="divTableBody">
+      <div class="divTableRow">
+      <div class="divTableCell">add <:number1:> <:number2:></div>
+      <div class="divTableCell">sums up the number you entered in the syntax</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">sub <:number1:> <:number2:></div>
+      <div class="divTableCell">subtracts the numbers you entered in the syntax</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">multi <:number1:> <:number2:></div>
+      <div class="divTableCell">gives out the product that you entered in the syntax</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">div <:dividend:> <:divisor:></div>
+      <div class="divTableCell">divides the given number that you entered according to the syntax</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">facto <:number:></div>
+      <div class="divTableCell">gives the factorial series of a number that you entered in the syntax</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">sq</div>
+      <div class="divTableCell">gives out the answer of the square number that you entered </div>
+      </div>
+      </div>
+      </div>
+      <h2 id="head4">Category3</h2>
+  <div class="tab3">
+    <div class="divTable blueTable">
+      <div class="divTableHeading">
+      <div class="divTableRow">
+      <div class="divTableHead">Name</div>
+      <div class="divTableHead">Uses</div>
+      </div>
+      </div>
+      <div class="divTableBody">
+      <div class="divTableRow">
+      <div class="divTableCell">kick <:member:></div>
+      <div class="divTableCell">command which kicks out the member mentioned if the bot is given the permission to kick members</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">ban <:member:></div>
+      <div class="divTableCell">bans the member which is mentioned in the syntax from the server</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">clear <:number:></div>
+      <div class="divTableCell">this command is used to clear a number of messages at once.</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">boom <:channel:></div>
+      <div class="divTableCell">the command deletes the channel that is mentioned above in the syntax</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">rules</div>
+      <div class="divTableCell">command prints out the preset embeded set of rules made by the bot. The embed message would be print in that channel where the command is ran</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">unban <:member:></div>
+      <div class="divTableCell">this command is the contrary of the kick command. The tag of the member which has to be unbanned should be in full form (e.g. @abcd#1234)</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">poll</div>
+      <div class="divTableCell">holds out a poll, the options are only two right now. Rest would be added in future</div>
+      </div>
+      </div>
+      </div>
+      <h2 id="head5">Category4</h2>
+  <div class="tab4">
+    <div class="divTable blueTable">
+      <div class="divTableHeading">
+      <div class="divTableRow">
+      <div class="divTableHead">Name</div>
+      <div class="divTableHead">Uses</div>
+      </div>
+      </div>
+      <div class="divTableBody">
+      <div class="divTableRow">
+      <div class="divTableCell">rolldice</div>
+      <div class="divTableCell">this command returns a random number from a dice throw</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">fact</div>
+      <div class="divTableCell">tells a random fact to you</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">spam <:number:> <:message:></div>
+      <div class="divTableCell">spams a certain amount of message that you entered</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">toss</div>
+      <div class="divTableCell">flips a coin a coin and tells you the result of it.</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">answer <:question:></div>
+      <div class="divTableCell">the command answers out a random thing to your question asked. Also known as 8ball popularily</div>
+      </div>
+      <div class="divTableRow">
+      <div class="divTableCell">rate <:message:></div>
+      <div class="divTableCell">rates you on the basis of message you entered!</div>
+      </div>
+      </div>
+      </div>
+  </div>
+</div>
+</body>
+</html>
